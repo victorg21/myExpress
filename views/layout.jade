@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav
+      h1= title
+      ul
+        a(href = 'home')
+          li home page
+        a(href = '/')
+          li about
+        a(href = 'users')
+          li users
+        a(href = 'product/123')
+          li product
+        a(href = 'cookie')
+          li cookie
+    section
+      block mainContent

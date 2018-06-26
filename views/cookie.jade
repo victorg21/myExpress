@@ -1,0 +1,42 @@
+extends layout
+
+block mainContent
+    h1= title
+    p Welcome to #{title}
+    h3 Number of click are:  #{counter}
+
+
+    table
+        thead
+            td
+                h1
+                    u= "Add cookie - Post Method"
+            td
+                h1= "- - - - - - -  -"
+            td
+                h1
+                    u= "All Cookies"
+        tr
+            td
+                form(name="addCookieForm", method="post" action="http://localhost:3000/cookie")
+                    div.input
+                        span.label Cookie Name
+                        input(type="text", name="cookieName" value="")
+                    div.input
+                        span.label Cookie value
+                        input(type="text", name="cookieValue" value="")
+                    div.actions
+                        input(type="submit", value="send")
+            td
+                h1= " "
+            td
+                table
+                    thead
+                        td
+                            h1= "Name"
+                        td
+                            h1= "Value"
+                    each val, index in cookiesObject
+                        tr
+                            td= index
+                            td= val

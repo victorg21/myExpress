@@ -1,0 +1,27 @@
+
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+nav{
+  vertical-align: top;
+  display: inline-block;
+  width: 15%;
+  height: 100%;
+  background-color: aquamarine;
+}
+section{
+  display: inline-block;
+  width: 85%;
+  height: 100%;
+  background-color: beige;
+}

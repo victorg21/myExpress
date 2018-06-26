@@ -1,0 +1,36 @@
+extends layout
+
+block mainContent
+    h1= titleGet
+
+    table
+        thead
+            td
+                h1= "Post Method"
+            td
+                h1= "Get Method"
+        tr
+            td
+                form(name="add-estimation", method="post" action="http://localhost:3000/bmi")
+                    div.input
+                        span.label Weight
+                        input(type="text", name="weightPost" value="#{weightPost}")
+                    div.input
+                        span.label Height
+                        input(type="text", name="heightPost" value="#{heightPost}")
+                    div.actions
+                        input(type="submit", value="send")
+
+                h1= "bmi is : " +theBmiPost
+            td
+                form(name="add-estimation", method="get" action="http://localhost:3000/bmi")
+                    div.input
+                        span.label Weight
+                        input(type="text", name="weightGet" value="#{weightGet}")
+                    div.input
+                        span.label Height
+                        input(type="text", name="heightGet" value="#{heightGet}")
+                    div.actions
+                        input(type="submit", value="send")
+
+                h1= "bmi is : " + theBmiGet
